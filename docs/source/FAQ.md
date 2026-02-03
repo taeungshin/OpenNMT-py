@@ -555,6 +555,10 @@ Additional options are available:
 - `src_onmttok_kwargs`: additional kwargs for pyonmttok Tokenizer class, source side;
 - `tgt_onmttok_kwargs`: additional kwargs for pyonmttok Tokenizer class, target side.
 
+For inline tag patterns like `<NAME>` that must be preserved end-to-end, pass
+`preserve_placeholders: True` in `src_onmttok_kwargs` and `tgt_onmttok_kwargs`
+so the tokenizer keeps tags intact instead of splitting them.
+
 #### [SentencePiece](https://github.com/google/sentencepiece)
 
 Transform name: `sentencepiece`
